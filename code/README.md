@@ -1,76 +1,36 @@
-# Example application code for the python architecture book
+YAAQOB ABDLSATTAR HAMID ABDULQADER -201932130146 (leader)
+RADMAN ABDULNASER ABDULHABEB SHAMSAN-201932130140
+Mutumba Jonathan -201932130136
+ABBDULHAKIM ALI HASSAN-201932130107
+AL-ASBHI YOUSF NAJEEB AMEEN ABDULJABAR-201832130105
+Lab3: Persistence Ignorance
+Introduction:
 
-## Chapters
+In main point of this lab is to understand the repository pattern and the service layer pattern , also get to know why it is important to separate business logic from data storage techniques.
 
-Each chapter has its own branch which contains all the commits for that chapter,
-so it has the state that corresponds to the _end_ of that chapter.  If you want
-to try and code along with a chapter, you'll want to check out the branch for the
-previous chapter.
+What we will be applying is a non database strategy while implementing the repository pattern by defining a class PickleRepository. 
+Materials and Methods:
+1-Use the repository 
+2-Use the service layer 
+3-Pickle library 
+4-Pytest 
 
-https://github.com/python-leap/code/branches/all
-
-
-## Exercises
-
-Branches for the exercises follow the convention `{chatper_name}_exercise`, eg 
-https://github.com/python-leap/code/tree/chapter_04_service_layer_exercise
-
-
-## Requirements
-
-* docker with docker-compose
-* for chapters 1 and 2, and optionally for the rest: a local python3.7 virtualenv
+Results:
 
 
-## Building the containers
-
-_(this is only required from chapter 3 onwards)_
-
-```sh
-make build
-make up
-# or
-make all # builds, brings containers up, runs tests
-```
-
-## Creating a local virtualenv (optional)
-
-```sh
-python3.8 -m venv .venv && source .venv/bin/activate # or however you like to create virtualenvs
-
-# for chapter 1
-pip install pytest 
-
-# for chapter 2
-pip install pytest sqlalchemy
-
-# for chapter 4+5
-pip install requirements.txt
-
-# for chapter 6+
-pip install requirements.txt
-pip install -e src/
-```
-
-<!-- TODO: use a make pipinstall command -->
 
 
-## Running the tests
 
-```sh
-make test
-# or, to run individual test types
-make unit
-make integration
-make e2e
-# or, if you have a local virtualenv
-make up
-pytest tests/unit
-pytest tests/integration
-pytest tests/e2e
-```
+Discussions:
+What is the difference between the textbook test services.py and my test services.py? 
+1_Well in your my test services at     you stored the batch as a dictionary  but in the textbook it was stored as a list 
+2 - 
 
-## Makefile
 
-There are more useful commands in the makefile, have a look and try them out.
+2-Has the service layer been affected after we have chosen to use another implementation for the Repository Pattern? Can we say that the service layer is ignorant of the persistence? 
+Its not effected and the  ignorant of the persistence was applied to SQLAlchemy
+3-What is the benefit of separating business logic from infrastructure concerns? Where is the business logic defined, and where is the infrastructure defined? Tell me the Python file name(s).
+The benefit is that when  its separated it will be easier to test and modify  , not separating it will lead in slowing down the unit tests or making changes hard  
+
+
 
