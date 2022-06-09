@@ -1,9 +1,7 @@
-YAAQOB ABDLSATTAR HAMID ABDULQADER -201932130146 (leader)
-RADMAN ABDULNASER ABDULHABEB SHAMSAN-201932130140
-Mutumba Jonathan -201932130136
-ABBDULHAKIM ALI HASSAN-201932130107
-AL-ASBHI YOUSF NAJEEB AMEEN ABDULJABAR-201832130105
+
 Lab3: Persistence Ignorance
+
+
 Introduction:
 
 In main point of this lab is to understand the repository pattern and the service layer pattern , also get to know why it is important to separate business logic from data storage techniques.
@@ -16,20 +14,20 @@ Materials and Methods:
 4-Pytest 
 
 Results:
+![image](https://user-images.githubusercontent.com/75038987/172804751-a11f5a00-eaf3-4d22-a439-3e51ec3f2bd9.png)
+![image](https://user-images.githubusercontent.com/75038987/172804792-ef35ef84-a2fc-4322-8f79-e65dc5cacee7.png)
 
 
 
 
 
 Discussions:
-What is the difference between the textbook test services.py and my test services.py? 
-1_Well in your my test services at     you stored the batch as a dictionary  but in the textbook it was stored as a list 
-2 - 
 
-
-2-Has the service layer been affected after we have chosen to use another implementation for the Repository Pattern? Can we say that the service layer is ignorant of the persistence? 
+1-Has the service layer been affected after we have chosen to use another implementation for the Repository Pattern? Can we say that the service layer is ignorant of the persistence? 
 Its not effected and the  ignorant of the persistence was applied to SQLAlchemy
-3-What is the benefit of separating business logic from infrastructure concerns? Where is the business logic defined, and where is the infrastructure defined? Tell me the Python file name(s).
+
+
+2-What is the benefit of separating business logic from infrastructure concerns? Where is the business logic defined, and where is the infrastructure defined? Tell me the Python file name(s).
 The benefit is that when  its separated it will be easier to test and modify  , not separating it will lead in slowing down the unit tests or making changes hard  
 
 
